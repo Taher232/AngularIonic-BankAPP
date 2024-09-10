@@ -1,0 +1,26 @@
+<ion-content class="ion-padding">
+  <ion-card class="card">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let transaction of transactions">
+                  <td>{{ transaction.type }}</td>
+                  <td>{{ transaction.amount | currency:'USD' }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

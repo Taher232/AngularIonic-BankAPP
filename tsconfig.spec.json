@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": [
+      "jest",
+    ],
+    "files": [
+      "src/test.ts"
+    ],
+    "allowJs": true,
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "target": "es2018",
+    "jsx": "react"
+  },
+  "include": [
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
+  ]
+}

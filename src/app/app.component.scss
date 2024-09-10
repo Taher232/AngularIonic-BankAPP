@@ -1,0 +1,45 @@
+ion-menu {
+    --background: #f8f9fa;
+  }
+  
+  ion-toolbar {
+    --background: #007bff;
+    --color: #ffffff;
+  }
+  
+  ion-content {
+    ion-list {
+      ion-item {
+        --background: #ffffff;
+        --color: #000000;
+        --border-color: #e0e0e0;
+        --border-width: 1px;
+        --border-style: solid;
+        --border-radius: 4px;
+        margin: 8px 0;
+  
+        ion-icon {
+          color: #007bff;
+        }
+  
+        ion-label {
+          font-weight: bold;
+        }
+  
+        &:hover {
+          --background: #e9ecef;
+        }
+      }
+    }
+  }
+  
+  ion-split-pane {
+    ion-menu {
+      width: 250px;
+    }
+  
+    ion-router-outlet {
+      padding: 16px;
+    }
+  }
+  

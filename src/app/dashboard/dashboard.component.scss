@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 30px;
+  color: #162969;
+}
+
+.card1 {
+  width: 420px;
+  height: 290px;
+  perspective: 600px;
+}
+
+.card__part {
+  margin-top: 100px;
+  box-shadow: 1px 1px #aaa3a3;
+  top: 0;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  display: inline-block;
+  width: 400px;
+  height: 240px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  background-color: #2b666f98;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card__front {
+  padding: 18px;
+  transform: rotateY(0);
+}
+
+.card__back {
+  padding: 18px 0;
+  transform: rotateY(-180deg);
+}
+
+.card__black-line {
+  margin-top: 5px;
+  height: 38px;
+  background-color: #303030;
+}
+
+.card_number {
+  display: block;
+  width: 100%;
+  word-spacing: 4px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: rgba(243, 237, 237, 0.619);
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.card__space-75 {
+  width: 75%;
+  float: left;
+}
+
+.card__space-25 {
+  width: 25%;
+  float: left;
+}
+
+.card__label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+}
+
+.card__info {
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card__back-content {
+  padding: 15px 15px 0;
+}
+
+.card1:hover .card__front {
+  transform: rotateY(180deg);
+}
+
+.card1:hover .card__back {
+  transform: rotateY(0deg);
+}
+
+/* Ionic Card Styles */
+ion-card {
+  --background: #21212100;
+  box-shadow: rgb(0, 0, 0) 10px 20px 30px, rgb(0, 0, 0) 10px 1px 53px 3px, rgb(1, 0, 0) 0px -1px 3px inset;
+  transition: all 0.5s;
+}
+
+ion-card:hover {
+  transform: scale(1.021);
+}
+
+ion-card:active {
+  transform: scale(0.95) rotateZ(1.1deg);
+}
+
+/* Form Styles */
+ion-input {
+  height: 50px;
+  padding: 0 16px;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid #229620;
+  color: #f9f9f9;
+  animation: shake_541 0.14s 3;
+}
+
+ion-input:valid {
+  --border-color: #45feaf;
+  animation: none;
+}
+
+@keyframes shake_541 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(-8px);
+  }
+}
+
+/* Button Styles */
+ion-button {
+  font-weight: 800;
+  font-family: 'Crimson Text', serif;
+}
+
+.wbtn {
+  width: 17rem;
+  height: 3.5rem;
+}
+
+/* View Transaction Link */
+.view {
+  text-decoration: none;
+  color: #6bc4f0;
+}
+
+.atmclick {
+  font-size: 13.5px;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.345);
+}
+
+/* Validation Messages */
+.valdiv {
+  margin-top: -22px;
+  margin-bottom: -32px;
+  width: 100%;
+  font-size: 15px;
+  color: rgba(255, 0, 0, 0.843);
+}

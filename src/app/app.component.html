@@ -1,0 +1,45 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <!-- Side Menu -->
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-menu-toggle auto-hide="false">
+            <ion-item>
+              <ion-icon slot="start" name="mail"></ion-icon>
+              <ion-label>Inbox</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-item routerLink="/dashboard">
+            <ion-icon slot="start" name="grid-outline"></ion-icon>
+            <ion-label>Dashboard</ion-label>
+          </ion-item>
+          <ion-item routerLink="/login">
+            <ion-icon slot="start" name="log-in-outline"></ion-icon>
+            <ion-label>Login</ion-label>
+          </ion-item>
+          <ion-item routerLink="/homecard">
+            <ion-icon slot="start" name="home-outline"></ion-icon>
+            <ion-label>Home Card</ion-label>
+          </ion-item>
+          <ion-item routerLink="/register-card">
+            <ion-icon slot="start" name="person-add-outline"></ion-icon>
+            <ion-label>Register Card</ion-label>
+          </ion-item>
+          <ion-item routerLink="/delete">
+            <ion-icon slot="start" name="trash-bin-outline"></ion-icon>
+            <ion-label>Delete</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- Main Content -->
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

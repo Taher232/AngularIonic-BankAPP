@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Dashboard</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Logout</ion-button>
+      <ion-button (click)="deleteAcc()" color="danger">Delete Account</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <ion-card class="custom-card">
+          <ion-card-header>
+            <ion-card-subtitle>Welcome</ion-card-subtitle>
+            <ion-card-title>{{user}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Balance:</ion-label>
+              <ion-note>₹ 8243</ion-note>
+            </ion-item>
+            <ion-item>
+              <ion-label>Expires:</ion-label>
+              <ion-note>10/25</ion-note>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card class="custom-card">
+          <ion-card-header>
+            <ion-card-subtitle>Add Money</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <form [formGroup]="depositForm">
+              <ion-item>
+                <ion-label position="floating">Account Number</ion-label>
+                <ion-input formControlName="acno"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="depositForm.get('acno')?.errors && depositForm.get('acno')?.touched">
+                <p class="text-danger">Invalid Account Number</p>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input formControlName="psw" type="password"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="depositForm.get('psw')?.errors && depositForm.get('psw')?.touched">
+                <p class="text-danger">Invalid Password</p>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Amount</ion-label>
+                <ion-input formControlName="amnt"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="depositForm.get('amnt')?.errors && depositForm.get('amnt')?.touched">
+                <p class="text-danger">Invalid Amount</p>
+              </ion-item>
+            </form>
+          </ion-card-content>
+          <ion-card-footer>
+            <ion-button expand="block" (click)="deposit()" color="success">Deposit</ion-button>
+          </ion-card-footer>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card class="custom-card">
+          <ion-card-header>
+            <ion-card-subtitle>Withdraw Money</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <form [formGroup]="withdrawForm">
+              <ion-item>
+                <ion-label position="floating">Account Number</ion-label>
+                <ion-input formControlName="acno"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="withdrawForm.get('acno')?.errors && withdrawForm.get('acno')?.touched">
+                <p class="text-danger">Invalid Account Number</p>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input formControlName="psw" type="password"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="withdrawForm.get('psw')?.errors && withdrawForm.get('psw')?.touched">
+                <p class="text-danger">Invalid Password</p>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Amount</ion-label>
+                <ion-input formControlName="amnt"></ion-input>
+              </ion-item>
+              <ion-item *ngIf="withdrawForm.get('amnt')?.errors && withdrawForm.get('amnt')?.touched">
+                <p class="text-danger">Invalid Amount</p>
+              </ion-item>
+            </form>
+          </ion-card-content>
+          <ion-card-footer>
+            <ion-button expand="block" (click)="withdrew()" color="danger">Withdraw</ion-button>
+          </ion-card-footer>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-delete (onDelete)="ondeleteAcc($event)" (onCancel)="cancelChild()" [item]="acno"></app-delete>
+</ion-content>

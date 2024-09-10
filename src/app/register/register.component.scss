@@ -1,0 +1,40 @@
+/* register.component.scss */
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 2vh auto;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.144);
+    box-shadow: 1.5px 1.5px 3px 5px #1C2C2C, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+    border-radius: 5px;
+  }
+  
+  .valdiv1 {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+  
+  @media screen and (max-width: 510px) {
+    .container {
+      width: 300px;
+      height: 400px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      padding: 0;
+    }
+  }
+  

@@ -1,0 +1,88 @@
+/* homecard.component.scss */
+
+.container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .card__info {
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card__logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card__chip {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .card__chip-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .card__chip-texture {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    border-radius: 5px;
+  }
+  
+  .card__type {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .card__number {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .card__digit-group {
+    letter-spacing: 2px;
+  }
+  
+  .card__valid-thru {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+  
+  .card__exp-date {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  .card__name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .card__vendor {
+    font-size: 1em;
+  }
+  
+  .card__texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/card-texture.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    border-radius: 10px;
+  }
+  

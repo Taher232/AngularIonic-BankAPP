@@ -1,0 +1,30 @@
+/* transaction.component.scss */
+
+.card {
+  background: #21212100;
+  box-shadow: rgb(0, 0, 0) 10px 20px 30px, rgb(0, 0, 0) 10px 1px 53px 3px, rgb(1, 0, 0) 0px -1px 3px inset;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  user-select: none;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.021);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.1deg);
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
